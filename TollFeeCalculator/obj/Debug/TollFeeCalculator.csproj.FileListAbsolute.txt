@@ -1,0 +1,11 @@
+/Users/alamir/RiderProjects/TollFeeCalculator/TollFeeCalculator/bin/Debug/TollFeeCalculator.exe
+/Users/alamir/RiderProjects/TollFeeCalculator/TollFeeCalculator/bin/Debug/TollFeeCalculator.pdb
+/Users/alamir/RiderProjects/TollFeeCalculator/TollFeeCalculator/obj/Debug/TollFeeCalculator.csproj.AssemblyReference.cache
+/Users/alamir/RiderProjects/TollFeeCalculator/TollFeeCalculator/obj/Debug/TollFeeCalculator.csproj.CoreCompileInputs.cache
+/Users/alamir/RiderProjects/TollFeeCalculator/TollFeeCalculator/obj/Debug/TollFeeCalculator.exe
+/Users/alamir/RiderProjects/TollFeeCalculator/TollFeeCalculator/obj/Debug/TollFeeCalculator.pdb
+/Users/alamir/RiderProjects/TollFeeCalculator/TollFeeCalculator/bin/Debug/PublicHoliday.dll
+/Users/alamir/RiderProjects/TollFeeCalculator/TollFeeCalculator/bin/Debug/PublicHoliday.xml
+/Users/alamir/RiderProjects/TollFeeCalculator/TollFeeCalculator/obj/Debug/TollFeeCalculator.csproj.CopyComplete
+/Users/alamir/RiderProjects/TollFeeCalculator/TollFeeCalculator/bin/Debug/Nager.Date.dll
+/Users/alamir/RiderProjects/TollFeeCalculator/TollFeeCalculator/bin/Debug/Nager.Date.xml
