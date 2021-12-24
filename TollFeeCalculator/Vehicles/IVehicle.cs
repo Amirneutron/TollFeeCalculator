@@ -4,6 +4,6 @@ namespace TollFeeCalculator
 {
     public interface IVehicle
     {
-        public string GetVehicleType();
+        bool isTollFreeVehicle();
     }
 }

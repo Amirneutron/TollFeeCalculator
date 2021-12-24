@@ -2,9 +2,10 @@ namespace TollFeeCalculator
 {
     public class Car : IVehicle
     {
-        public string GetVehicleType()
+        public bool isTollFreeVehicle()
         {
-            return "Car";
+            return false;
         }
+        
     }
 }

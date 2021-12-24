@@ -1,0 +1,13 @@
+/Users/alamir/RiderProjects/TollFeeCalculator/UnitTests/bin/Debug/UnitTests.dll
+/Users/alamir/RiderProjects/TollFeeCalculator/UnitTests/bin/Debug/UnitTests.pdb
+/Users/alamir/RiderProjects/TollFeeCalculator/UnitTests/bin/Debug/Nager.Date.dll
+/Users/alamir/RiderProjects/TollFeeCalculator/UnitTests/bin/Debug/nunit.framework.dll
+/Users/alamir/RiderProjects/TollFeeCalculator/UnitTests/bin/Debug/TollFeeCalculator.exe
+/Users/alamir/RiderProjects/TollFeeCalculator/UnitTests/bin/Debug/TollFeeCalculator.pdb
+/Users/alamir/RiderProjects/TollFeeCalculator/UnitTests/bin/Debug/Nager.Date.xml
+/Users/alamir/RiderProjects/TollFeeCalculator/UnitTests/bin/Debug/nunit.framework.xml
+/Users/alamir/RiderProjects/TollFeeCalculator/UnitTests/obj/Debug/UnitTests.csproj.AssemblyReference.cache
+/Users/alamir/RiderProjects/TollFeeCalculator/UnitTests/obj/Debug/UnitTests.csproj.CoreCompileInputs.cache
+/Users/alamir/RiderProjects/TollFeeCalculator/UnitTests/obj/Debug/UnitTests.csproj.CopyComplete
+/Users/alamir/RiderProjects/TollFeeCalculator/UnitTests/obj/Debug/UnitTests.dll
+/Users/alamir/RiderProjects/TollFeeCalculator/UnitTests/obj/Debug/UnitTests.pdb
