@@ -1,8 +1,6 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using Nager.Date;
-using PublicHoliday;
+
 
 namespace TollFeeCalculator
 {
@@ -23,14 +21,14 @@ namespace TollFeeCalculator
             
             if (vehicle == null) throw new ArgumentNullException(nameof(vehicle));
             if (dates == null) throw new ArgumentNullException(nameof(dates));
-            
-            if (!dates.Any())
+
+            if (dates.Length == 0 || vehicle.isTollFreeVehicle())
                 return 0;
 
-            var sortDate = dates.OrderBy(date => date.Ticks).ToList();
-            DateTime intervalStart = sortDate[0];
+            //var sortDate = dates.OrderBy(date => date.Ticks).ToList();
+            DateTime intervalStart = dates[0];
             int totalFee = 0;
-            foreach (DateTime date in sortDate)
+            foreach (DateTime date in dates)
             {
                 int nextFee = GetTollFee(date, vehicle);
                 int tempFee = GetTollFee(intervalStart, vehicle);
@@ -50,24 +48,16 @@ namespace TollFeeCalculator
                 }
             }
             if (totalFee > MaxTollForOneDay) totalFee = MaxTollForOneDay;
+            
             return totalFee;
         }
-
-        private bool IsTollFreeVehicle(IVehicle vehicle)
-        {
-            if (vehicle == null) return false;
-            String vehicleType = vehicle.GetVehicleType();
-            return vehicleType.Equals(TollFreeVehicles.Motorbike.ToString()) ||
-                   vehicleType.Equals(TollFreeVehicles.Tractor.ToString()) ||
-                   vehicleType.Equals(TollFreeVehicles.Emergency.ToString()) ||
-                   vehicleType.Equals(TollFreeVehicles.Diplomat.ToString()) ||
-                   vehicleType.Equals(TollFreeVehicles.Foreign.ToString()) ||
-                   vehicleType.Equals(TollFreeVehicles.Military.ToString());
-        }
+        
+        
 
         public int GetTollFee(DateTime date, IVehicle vehicle)
         {
-            if (IsTollFreeDate(date) || IsTollFreeVehicle(vehicle)) return 0;
+            if (IsTollFreeDate(date)) return 0;
+            
 
             int hour = date.Hour;
             int minute = date.Minute;
@@ -99,15 +89,7 @@ namespace TollFeeCalculator
 
             return false;
         }
-
-        private enum TollFreeVehicles
-        {
-            Motorbike = 0,
-            Tractor = 1,
-            Emergency = 2,
-            Diplomat = 3,
-            Foreign = 4,
-            Military = 5
-        }
+        
+        
     }
 }

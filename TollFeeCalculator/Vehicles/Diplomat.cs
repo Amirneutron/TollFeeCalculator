@@ -1,7 +1,10 @@
 namespace TollFeeCalculator
 {
-    public class Diplomat
+    public class Diplomat : IVehicle
     {
-        
+        public bool isTollFreeVehicle()
+        {
+            return true;
+        }
     }
 }

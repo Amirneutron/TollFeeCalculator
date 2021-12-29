@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TollFeeCalculator", "TollFeeCalculator\TollFeeCalculator.csproj", "{FAF39D42-6575-4E3D-805B-7E3E370FC7FF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{8AA24A67-96DE-41CA-A9DD-326A4F29C8E9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{FAF39D42-6575-4E3D-805B-7E3E370FC7FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FAF39D42-6575-4E3D-805B-7E3E370FC7FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FAF39D42-6575-4E3D-805B-7E3E370FC7FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AA24A67-96DE-41CA-A9DD-326A4F29C8E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AA24A67-96DE-41CA-A9DD-326A4F29C8E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AA24A67-96DE-41CA-A9DD-326A4F29C8E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AA24A67-96DE-41CA-A9DD-326A4F29C8E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+    <Import Project="..\packages\NUnit.3.13.2\build\NUnit.props" Condition="Exists('..\packages\NUnit.3.13.2\build\NUnit.props')"/>
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')"/>
     <PropertyGroup>
         <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
         <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -34,33 +35,46 @@
         <WarningLevel>4</WarningLevel>
     </PropertyGroup>
     <ItemGroup>
-        <Reference Include="Microsoft.CSharp" />
+        <Reference Include="Microsoft.CSharp"/>
         <Reference Include="Nager.Date, Version=1.30.0.0, Culture=neutral, PublicKeyToken=null">
-          <HintPath>..\packages\Nager.Date.1.30.0\lib\net472\Nager.Date.dll</HintPath>
-          <Private>True</Private>
+            <HintPath>..\packages\Nager.Date.1.30.0\lib\net472\Nager.Date.dll</HintPath>
+            <Private>True</Private>
+        </Reference>
+        <Reference Include="nunit.framework, Version=3.13.2.0, Culture=neutral, PublicKeyToken=2638cd05610744eb">
+            <HintPath>..\packages\NUnit.3.13.2\lib\net45\nunit.framework.dll</HintPath>
+            <Private>True</Private>
         </Reference>
         <Reference Include="PublicHoliday, Version=2.13.0.0, Culture=neutral, PublicKeyToken=null">
-          <HintPath>..\packages\PublicHoliday.2.13.0\lib\net46\PublicHoliday.dll</HintPath>
-          <Private>True</Private>
+            <HintPath>..\packages\PublicHoliday.2.13.0\lib\net46\PublicHoliday.dll</HintPath>
+            <Private>True</Private>
         </Reference>
-        <Reference Include="System" />
-        <Reference Include="System.Core" />
-        <Reference Include="System.Data" />
-        <Reference Include="System.Xml" />
+        <Reference Include="System"/>
+        <Reference Include="System.Core"/>
+        <Reference Include="System.Data"/>
+        <Reference Include="System.Xml"/>
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="Car.cs" />
-        <Compile Include="IVehicle.cs" />
-        <Compile Include="Motorbike.cs" />
-        <Compile Include="Program.cs" />
-        <Compile Include="Properties\AssemblyInfo.cs" />
-        <Compile Include="TollCalculator.cs" />
-        <Compile Include="Vehicle.cs" />
+        <Compile Include="Program.cs"/>
+        <Compile Include="Properties\AssemblyInfo.cs"/>
+        <Compile Include="TollCalculator.cs"/>
+        <Compile Include="Vehicles\Car.cs"/>
+        <Compile Include="Vehicles\Diplomat.cs"/>
+        <Compile Include="Vehicles\Emergency.cs"/>
+        <Compile Include="Vehicles\Foreign.cs"/>
+        <Compile Include="Vehicles\IVehicle.cs"/>
+        <Compile Include="Vehicles\Military.cs"/>
+        <Compile Include="Vehicles\Motorbike.cs"/>
     </ItemGroup>
     <ItemGroup>
-      <None Include="packages.config" />
+        <None Include="packages.config"/>
     </ItemGroup>
-    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
+    <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+        <PropertyGroup>
+            <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them. For more information, see http://go.microsoft.com/fwlink/?LinkID=322105.The missing file is {0}.</ErrorText>
+        </PropertyGroup>
+        <Error Condition="!Exists('..\packages\NUnit.3.13.2\build\NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit.3.13.2\build\NUnit.props'))"/>
+    </Target>
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
          Other similar extension points exist, see Microsoft.Common.targets.
     <Target Name="BeforeBuild">

@@ -16,6 +16,17 @@ namespace UnitTests
             int actual = toll.GetTollFee(new Car(), date);
             Assert.AreEqual(0, actual);
         }
+
+        [Test]
+        public void DateIsPublicHoliday()
+        {
+            DateTime[] date = { new DateTime(2021, 12, 24, 06, 50, 0) };
+            TollCalculator toll = new TollCalculator();
+
+            int actual = toll.GetTollFee(new Car(), date);
+            
+            Assert.AreEqual(0, 0 );
+        }
         
        
 
